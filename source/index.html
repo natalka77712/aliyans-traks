@@ -1,13 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/PTSansBold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PTSansRegular.woff" as="font" crossorigin="anonymous">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Альянс Тракс</title>
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="page-header">
+    <div class="page-header__top container">
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link">Оплата</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Доставка</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Вопрос-Ответ</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Оферта</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="page-header__link" href="#">Интернет-магазин
+      </a>
+      <ul class="page-header__user-navigation">
+        <li class="page-header__user-profile">
+          <a class="page-header__user-identification" href="#">Вход
+            <svg class="page-header__icon-identification"></svg>
+          </a>
+        </li>
+        <li class="page-header__user-profile">
+          <a class="page-header__user-registration" href="#">Регистрация
+            <svg class="page-header__icon-registragion"></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-header__contacts container">
+      <a class="page-header__logo-link">
+        <img src="img/logo.png" width="141" height="60" alt="Логотип АльянсТракс">
+      </a>
+      <form class="page-header__search-form" action="https://echo.htmlacademy.ru" method="post">
+        <input id="search" class="page-header__search-input" type="search" name="search" placeholder="Поиск:">
+        <label class="visually-hidden" for="search">Поиск товара</label>
+        <svg class = "loop" xmlns="http://www.w3.org/2000/svg"></svg>
+        <button class="page-header__button-search" aria-label="Поиск" type="submit"></button>
+      </form>
+      <div class="page-header__telefon-info">
+        <a class="page-header__telefon-number" href="tel:88000000000">8-800-000-00-00</a>
+        <a class="page-header__telefon-callback" href="#">Заказать звонок</a>
+      </div>
+      <a class="page-header__basket" href="#">Корзина
+        <p class="page-header__basket-payment">3249 руб</p>
+      </a>
+      <a class="page-header__order" href="#">Оплатить заказ</a>
+    </div>
+    <div class="page-header__site-navigation container">
+      <ul class="page-header__submenu-list">
+        <li class="page-header__submenu-item">
+          <a class="page-header__submenu-link">Шины</a>
+        </li>
+        <li class="page-header__submenu-item">
+          <a class="page-header__submenu-link" href="#">Автохимия</a>
+        </li>
+        <li class="page-header__submenu-item">
+          <a class="page-header__submenu-link" href="#">Автозапчасти</a>
+        </li>
+        <li class="page-header__submenu-item">
+          <a class="page-header__submenu-link" href="#">Масла</a>
+        </li>
+        <li class="page-header__submenu-item">
+          <a class="page-header__submenu-link" href="#">Автостекла</a>
+        </li>
+      </ul>
+      <ul class="page-header__service-list">
+        <li class="page-header__service-item">
+          <a class="page-header__service-link">Сервис грузовой техники</a>
+        </li>
+        <li class="page-header__service-item">
+          <a class="page-header__service-link">Продажа грузовой техники</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Альянс Тракс</h1>
+    <section class="main-block">
+      <img class="main-block__virtual-tour-icon" src="#" width="141" height="60" alt="Иконка виртуального тура">
+      <h2 class="main-block__title">3D-тур</h2>
+      <p class="main-block__desc">по нашему складу</p>
+      <a class="main-block__btn btn" href="#">Перейти</a>
+      <div class="main-block__slider-controls">
+        <button class="main-block__controls main-block__controls--not-active" type="button">Слайдер 1</button>
+        <button class="main-block__controls main-block__controls--current" type="button">Слайдер 2</button>
+      </div>
+    </section>
+    <section class="categories">
+      <h2 class="categories__title">Категории продукции</h2>
+      <ul class="categories__list">
+        <li class="categories__item">
+          <a href ="#" class="categories__link">
+            <img src="#" width="220" height="155" alt="Изображение шин">
+          </a>
+          <a class="categories__button" href="#">Перейти</a>
+          <a class="categories__link-product">Шины</a>
+        </li>
+        <li class="categories__item">
+          <a href ="#" class="categories__link">
+            <img src="#" width="220" height="155" alt="Изображение автохимии">
+          </a>
+          <a class="categories__button" href="#">Перейти</a>
+          <a class="categories__link-product">Автохимия</a>
+        </li>
+        <li class="categories__item">
+          <a href ="#" class="categories__link">
+            <img src="#" width="220" height="155" alt="Изображение автомобильных масел">
+          </a>
+          <a class="categories__button" href="#">Перейти</a>
+          <a class="categories__link-product">Автомобильные масла</a>
+        </li>
+        <li class="categories__item">
+          <a href ="#" class="categories__link">
+            <img src="#" width="220" height="155" alt="Изображение автозапчастей">
+          </a>
+          <a class="categories__button" href="#">Перейти</a>
+          <a class="categories__link-product">Автозапчасти</a>
+        </li>
+      </ul>
+    </section>
+    <section class="new-arrival">
+      <h2 class="new-arrival__title">Новые поступления</h2>
+      <p class="new-arrival__desc">Мы пополняем ассортимент магазина каждые 4 часа. Вы всегда можете найти у нас что-то новое!</p>
+      <ul class="new-arrival__list">
+        <li class="new-arrival__item">
+          <a href="#" class="new-arrival__link">
+            <h3 class="new-arrival__name">Масло трансмиссионное ЛУКОЙЛ ATF</h3>
+            <div class="image"><img src="#" width="220" height="155" alt="Изображение трансмиссионного масла"></div>
+            <p class="new-arrival__info">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,</p>
+            <b class="new-arrival__price">890 ₽</b>
+          </a>
+          <a class="new-arrival__button" href="#">Купить</a>
+        </li>
+        <li class="new-arrival__item">
+          <a href="#" class="new-arrival__link">
+            <h3 class="new-arrival__name">Масло трансмиссионное ЛУКОЙЛ ATF</h3>
+            <div class="image"><img src="#" width="220" height="155" alt="Изображение трансмиссионного масла"></div>
+            <p class="new-arrival__info">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,</p>
+            <b class="new-arrival__price">890 ₽</b>
+          </a>
+          <a class="new-arrival__button" href="#">Купить</a>
+        </li>
+        <li class="new-arrival__item">
+          <a href="#" class="new-arrival__link">
+            <h3 class="new-arrival__name">Масло трансмиссионное ЛУКОЙЛ ATF</h3>
+            <div class="image"><img src="#" width="220" height="155" alt="Изображение трансмиссионного масла"></div>
+            <p class="new-arrival__info">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,</p>
+            <b class="new-arrival__price">890 ₽</b>
+          </a>
+          <a class="new-arrival__button" href="#">Купить</a>
+        </li>
+        <li class="new-arrival__item">
+          <a href="#" class="new-arrival__link">
+            <h3 class="new-arrival__name">Масло трансмиссионное ЛУКОЙЛ ATF</h3>
+            <div class="image"><img src="#" width="220" height="155" alt="Изображение трансмиссионного масла"></div>
+            <p class="new-arrival__info">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,</p>
+            <b class="new-arrival__price">890 ₽</b>
+            </a>
+          <a class="new-arrival__button" href="#">Купить</a>
+        </li>
+        <li class="new-arrival__item">
+          <a href="#" class="new-arrival__link">
+            <h3 class="new-arrival__name">Масло трансмиссионное ЛУКОЙЛ ATF</h3>
+            <div class="image"><img src="#" width="220" height="155" alt="Изображение трансмиссионного масла"></div>
+            <p class="new-arrival__info">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,</p>
+            <b class="new-arrival__price">890 ₽</b>
+          </a>
+          <a class="new-arrival__button" href="#">Купить</a>
+        </li>
+        <li class="new-arrival__item">
+          <a href="#" class="new-arrival__link">
+            <h3 class="new-arrival__name">Масло трансмиссионное ЛУКОЙЛ ATF</h3>
+            <div class="image"><img src="#" width="220" height="155" alt="Изображение трансмиссионного масла"></div>
+            <p class="new-arrival__info">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,</p>
+            <b class="new-arrival__price">890 ₽</b>
+          </a>
+          <a class="new-arrival__button" href="#">Купить</a>
+        </li>
+        <li class="new-arrival__item">
+          <a href="#" class="new-arrival__link">
+            <h3 class="new-arrival__name">Масло трансмиссионное ЛУКОЙЛ ATF</h3>
+            <div class="image"><img src="#" width="220" height="155" alt="Изображение трансмиссионного масла"></div>
+            <p class="new-arrival__info">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,</p>
+            <b class="new-arrival__price">890 ₽</b>
+          </a>
+          <a class="new-arrival__button" href="#">Купить</a>
+        </li>
+        <li class="new-arrival__item">
+          <a href="#" class="new-arrival__link">
+            <h3 class="new-arrival__name">Масло трансмиссионное ЛУКОЙЛ ATF</h3>
+            <div class="image"><img src="#" width="220" height="155" alt="Изображение трансмиссионного масла"></div>
+            <p class="new-arrival__info">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,</p>
+            <b class="new-arrival__price">890 ₽</b>
+          </a>
+          <a class="new-arrival__button" href="#">Купить</a>
+        </li>
+      </ul>
+    </section>
+    <section class="subscription">
+      <h2 class="subscription__title">Хотите получать информацию о новинках и скидках? Подпишитесь на нашу рассылку!</h2>
+      <form id="subscription__new-form" action="subscribeNew">
+        <div class="subscription__input-block">
+          <input type="email" placeholder="Ваш email" name="email" required>
+          <input type="submit" value="Подписаться">
+        </div>
+      </form>
+    </section>
+    <footer class="page-footer">
+      <div class="page-footer__form" id="form">
+        <form class="page-footer__form-type" method="post" action="#">
+          <p class="page-footer__form-part">
+            <label for="ownerlogin" class="page-footer__form-label">Логин</label>
+            <input type="text" class="page-footer__form-input" id="ownerlogin" name="login-owner" required autocomplete="off">
+          </p>
+          <p class="page-footer__form-part">
+            <label for="ownerpassword" class="page-footer__form-label">Пароль</label>
+            <input type="password" class="page-footer__form-input" id="ownerpassword" name="password-owner" required autocomplete="off">
+          </p>
+          <button class="page-footer__form-btn" type="button">Войти</button>
+          <a class="page-footer__registration-link" href="#">Регистрация</a>
+        </form>
+      </div>
+      <div class="page-footer__navigation">Интернет-магазин
+        <ul class="page-footer__list page-footer__list--shop">
+          <li class="page-footer__item">
+            <a class="page-footer__item-link" href="#">Оплата</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__item-link" href="#">Доставка</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__item-link" href="#">Вопрос-ответ</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__item-link" href="#">Оферта</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__navigation">Категории
+        <ul class="page-footer__list page-footer__list--categories">
+          <li class="page-footer__item">
+            <a class="page-footer__item-link" href="#">Шины</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__item-link" href="#">Автохимия</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__item-link" href="#">Моторные масла</a>
+          </li>
+          <li class="page-footer__item">
+            <a class="page-footer__item-link" href="#">трансмиссионные масла</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__navigation">Пункты самовывоза
+        <p class="page-footer__pickup-address">141700, МО, г. Долгопрудный, Лихачевский проезд, д. 16</p>
+        <a href="tel:+74955439449">+7 (495) 543-94-49</a>
+        <p class="page-footer__pickup-work-shedule">Режим работы: ПН–ПТ с 08:00 до 20:00 СБ–ВС с 09:00 до 18:00</p>
+      </div>
+      <div class="page-footer__navigation">Мы в социальных сетях
+        <ul class="page-footer__social social">
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="#" aria-label="facebook">
+              <svg class="social__icon social__icon--fb" width="14" height="18">
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--tw" href="#" aria-label="twitter">
+              <svg class="social__icon social__icon--tw" width="24" height="16">
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--insta" href="#" aria-label="instagram">
+              <svg class="social__icon social__icon--insta" width="24" height="16">
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="page-footer__payment">Принимаем к оплате пластиковые карты</p>
+        <img src="#" width="220" height="155" alt="Изображение типа банковских карт">
+      </div>
+      <p class="page-footer__copyright">© 2019 «Альянс Тракс»</p>
+    </footer>
+
+  </main>
 </body>
 </html>
