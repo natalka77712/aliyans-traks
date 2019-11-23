@@ -1,0 +1,231 @@
+.main-block {
+  position: relative;
+  padding-top: 75px;
+  background: url("../img/main-desktop.jpg") no-repeat;
+  min-height: 380px;
+  background-size: 100% 100%;
+  background-color: $dark-blue;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/main-desktop@2x.jpg");
+  }
+}
+
+.main-block__tour {
+  padding-left: 300px;
+  padding-bottom: 73px;
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &::before {
+    width: 142px;
+    height: 142px;
+    left: 123px;
+    bottom: 131px;
+    background: url("../img/virtual-tour-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 4;
+  }
+
+  &::after {
+    width: 226px;
+    height: 226px;
+    left: 82px;
+    bottom: 85px;
+    border-radius: 50%;
+    background-color: $red;
+    opacity: 0.33;
+    z-index: 1;
+  }
+}
+
+.main-block__tour-title {
+  margin: 0;
+  position: relative;
+  font-size: 72px;
+  line-height: 86px;
+  z-index: 6;
+}
+
+.main-block__tour-desc {
+  margin: 0;
+  position: relative;
+  font-size: 26px;
+  line-height: 31px;
+  z-index: 6;
+}
+
+.main-block__btn {
+  margin-top: 40px;
+  width: 185px;
+}
+
+.main-block__slider-controls {
+  position: absolute;
+  display: flex;
+  margin: 0 0 0 -23px;
+  padding: 0;
+  bottom: 24px;
+  left: 50%;
+  width: 40px;
+}
+
+.main-block__controls {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  vertical-align: top;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+
+  &--not-active {
+    background-color: white;
+  }
+
+  &--current {
+    background-color: $red;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .main-block {
+    min-height: 244px;
+    background: url("../img/main-tablet.jpg") no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-tablet@2x.jpg");
+    }
+  }
+
+  .main-block__tour {
+    padding-bottom: 31px;
+    padding-left: 179px;
+
+    &::before {
+      width: 91px;
+      height: 92px;
+      left: 74px;
+      bottom: 73px;
+      background: url("../img/virtual-tour-tablet.png");
+    }
+
+    &::after {
+      width: 146px;
+      height: 146px;
+      left: 45px;
+      bottom: 47px;
+    }
+  }
+
+  .main-block__tour-title {
+    font-size: 46px;
+    line-height: 55px;
+  }
+
+  .main-block__tour-desc {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  .main-block__btn {
+    margin-top: 24px;
+    padding: 7px 10px;
+    width: 119px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .main-block__slider-controls {
+    width: 31px;
+
+    &--curent {
+      margin-right: 8px;
+    }
+  }
+
+  .main-block__controls {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .main-block {
+    min-height: 382px;
+    background: url("../img/main-mobile.jpg") no-repeat;
+    background-size: 100% 100%;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 257px;
+      height: 257px;
+      left: -52px;
+      bottom: 103px;
+      border-radius: 50%;
+      background-color: $red;
+      opacity: 0.2;
+      z-index: 1;
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-mobile@2x.jpg");
+    }
+  }
+
+  .main-block__tour {
+    padding-bottom: 82px;
+    padding-left: 145px;
+
+    &::before {
+      width: 124px;
+      height: 123px;
+      left: 17px;
+      bottom: 119px;
+      background: url("../img/virtual-tour-mobile.png");
+    }
+
+    &::after {
+      width: 181px;
+      height: 197px;
+      left: -11px;
+      bottom: 78px;
+    }
+  }
+
+  .main-block__tour-title {
+    font-size: 63px;
+    line-height: 76px;
+  }
+
+  .main-block__tour-desc {
+    font-size: 23px;
+    line-height: 28px;
+  }
+
+  .main-block__btn {
+    padding: 12px 10px;
+    width: 161px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .main-block__slider-controls {
+    width: 45px;
+  }
+
+  .main-block__controls {
+    width: 12px;
+    height: 12px;
+  }
+}

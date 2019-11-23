@@ -1,0 +1,130 @@
+.categories__title {
+  margin: 55px 0 65px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+}
+
+.categories__list {
+  @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.categories__button-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 263px;
+  height: 236px;
+  padding: 90px 0;
+  background-color: rgba(204, 0, 0, 0.65);
+  z-index: 10;
+  display: none;
+}
+
+.categories__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:hover {
+    .categories__button-active,
+    .categories__button {
+      display: block;
+    }
+  }
+}
+
+.categories__button {
+  width: 196px;
+  margin: 0 auto;
+  padding: 11px 0;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  font-family: inherit;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 3px;
+  display: none;
+}
+
+.categories__img {
+  width: 263px;
+  height: 236px;
+}
+
+.categories__link-product {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 24px;
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: $desktop-width) {
+  .categories {
+    padding: 0 20px;
+  }
+
+  .categories__title {
+    font-size: 19px;
+    line-height: 23px;
+    margin: 35px 0 39px;
+  }
+
+  .categories__img {
+    width: 169px;
+    height: 152px;
+  }
+
+  .categories__button-active {
+    padding: 55px 0;
+    width: 169px;
+    height: 152px;
+  }
+
+  .categories__button {
+    width: 126px;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .categories__link-product {
+    margin-top: 18px;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .categories {
+    padding: 0 6px;
+  }
+
+  .categories__title {
+    font-size: 24px;
+    line-height: 27px;
+    margin: 20px 20px 30px;
+  }
+
+  .categories__img,
+  .categories__button-active {
+    width: 165px;
+    height: 148px;
+  }
+
+  .categories__link-product {
+    margin: 20px 0 8px;
+  }
+}

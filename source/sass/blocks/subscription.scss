@@ -1,0 +1,139 @@
+.subscription {
+  padding-top: 20px;
+  background: url("../img/main-car-desktop.jpg") no-repeat;
+  min-height: 327px;
+  background-size: 100% 100%;
+  background-color: $dark-blue;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/main-car-desktop@2x.jpg");
+  }
+}
+
+.subscription__title {
+  position: relative;
+  padding: 35px 0;
+  margin: 0 auto;
+  max-width: 920px;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 140px;
+    left: 420px;
+    width: 68px;
+    height: 12px;
+    background-color: $red;
+  }
+}
+
+.subscription__input-wrapper {
+  margin: 45px auto 0;
+  padding-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+  width: 750px;
+}
+
+.subscription__btn {
+  width: 360px;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.subscription__btn.btn-input {
+  text-align: left;
+  font-size: 20px;
+}
+
+@media (max-width: $desktop-width) {
+  .subscription {
+    padding-top: 30px;
+    background: url("../img/main-car-tablet.jpg") no-repeat;
+    min-height: 225px;
+    background-size: 100% 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-car-tablet@2x.jpg");
+    }
+  }
+
+  .subscription__title {
+    padding: 0 0 50px;
+    font-size: 19px;
+    line-height: 23px;
+    max-width: 550px;
+
+    &::after {
+      top: 60px;
+      left: 250px;
+      width: 44px;
+      height: 8px;
+    }
+  }
+
+  .subscription__input-wrapper {
+    margin: 0 auto;
+    width: 480px;
+  }
+
+  .subscription__btn {
+    padding: 11px 10px;
+    width: 230px;
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .subscription__btn.btn-input {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .subscription {
+    padding-top: 20px;
+    background: url("../img/main-car-mobile.jpg") no-repeat;
+    min-height: 316px;
+    background-size: 100% 100%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/main-car-mobile@2x.jpg");
+    }
+  }
+
+  .subscription__title {
+    padding: 0 0 40px;
+    font-size: 18px;
+    line-height: 21px;
+    max-width: 88%;
+
+    &::after {
+      top: 72%;
+      left: 40%;
+      width: 15%;
+      height: 8px;
+    }
+  }
+
+  .subscription__input-wrapper,
+  .subscription__btn {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 94%;
+  }
+
+  .subscription__btn {
+    padding: 15px 10px;
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  .subscription__btn.btn-input {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}

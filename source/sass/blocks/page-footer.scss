@@ -1,0 +1,345 @@
+.page-footer {
+  padding-top: 50px;
+  background-color: $dark-blue;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  margin: 0 auto 50px;
+}
+
+.page-footer__form-type {
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__list,
+.page-footer__social {
+  @include reset-list;
+}
+
+.page-footer__social-link {
+  display: block;
+  margin-top: 10px;
+}
+
+.page-footer__pickup-address {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: -38px;
+    width: 23px;
+    height: 29px;
+    background: url("../img/icon-address.png");
+  }
+}
+
+.page-footer__item-link,
+.page-footer__registration-link {
+  font-size: 16px;
+  line-height: 36px;
+  color: $grey;
+}
+
+.page-footer__registration-link {
+  display: block;
+  margin-top: 4px;
+  text-align: center;
+}
+
+.page-footer__item-link {
+  text-decoration: none;
+}
+
+.page-footer__navigation {
+  max-width: 250px;
+  padding-right: 40px;
+}
+
+.page-footer__info {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.page-footer__pickup-work-shedule {
+  max-width: 165px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.page-footer__telefon {
+  display: block;
+  position: relative;
+  font: inherit;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: -36px;
+    width: 20px;
+    height: 25px;
+    background: url("../img/icon-telefon-red.png");
+  }
+}
+
+.page-footer__btn {
+  padding: 11px 10px;
+  margin-bottom: 10px;
+  width: 210px;
+  line-height: 17px;
+}
+
+.page-footer__btn.btn-input {
+  font-size: 14px;
+  text-align: left;
+}
+
+.page-footer__btn.btn {
+  font-size: 16px;
+}
+
+.page-footer__copyright {
+  padding: 20px 0;
+  margin: 0;
+  text-align: center;
+  background-color: black;
+}
+
+.page-footer__toggle {
+  display: none;
+}
+
+@media (max-width: $desktop-width) {
+  .page-footer {
+    padding-top: 20px;
+  }
+
+  .page-footer__wrapper {
+    justify-content: space-around;
+    margin: 0 auto 37px;
+  }
+
+  .page-footer__form-type {
+    margin-right: 20px;
+  }
+
+  .page-footer__btn {
+    padding: 8px 10px;
+    width: 135px;
+    line-height: 11px;
+  }
+
+  .page-footer__btn.btn-input {
+    font-size: 9px;
+  }
+
+  .page-footer__btn.btn {
+    font-size: 10px;
+  }
+
+  .page-footer__registration-link,
+  .page-footer__item-link {
+    font-size: 10px;
+    line-height: 23px;
+  }
+
+  .page-footer__navigation {
+    max-width: 135px;
+    padding-right: 0;
+  }
+
+  .page-footer__info {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .page-footer__pickup-address,
+  .page-footer__telefon {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .page-footer__pickup-work-shedule {
+    max-width: 107px;
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  .page-footer__social-img {
+    margin-bottom: 10px;
+    width: 76px;
+    height: 24px;
+  }
+
+  .page-footer__payment {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .page-footer__payment img {
+    margin-top: 10px;
+    width: 63px;
+    height: 17px;
+  }
+
+  .page-footer__copyright {
+    padding: 15px 0;
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  .page-footer__telefon::before {
+    left: -25px;
+    bottom: -1px;
+    width: 13px;
+    height: 16px;
+    background: url("../img/icon-telefon-red-tablet.png");
+  }
+
+  .page-footer__pickup-address::before {
+    left: -27px;
+    width: 15px;
+    height: 19px;
+    background: url("../img/icon-address-tablet.png");
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-footer__wrapper {
+    flex-direction: column;
+  }
+
+  .page-footer {
+    padding-top: 20px;
+    padding-right: 6px;
+  }
+
+  .page-footer__form {
+    order: 3;
+  }
+
+  .page-footer__btn {
+    padding: 12px 10px;
+    width: 54%;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .page-footer__btn.btn {
+    font-size: 16px;
+  }
+
+  .page-footer__registration-link {
+    font-size: 16px;
+    line-height: 36px;
+  }
+
+  .page-footer__navigation {
+    max-width: 95%;
+    padding-right: 0;
+
+    &--shop,
+    &--categories {
+      display: none;
+    }
+
+    &--pickup-address {
+      position: relative;
+      order: 1;
+      margin-left: 65px;
+    }
+
+    &--payment {
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+      margin-left: 20px;
+    }
+  }
+
+  .page-footer__toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 24px;
+    height: 22px;
+    border: 0;
+    background: url("../img/icon-mobile-menu.png") no-repeat 50% 50%;
+    background-color: transparent;
+    cursor: pointer;
+    outline: 0;
+  }
+
+  .page-footer__info {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .page-footer__pickup-address {
+    max-width: 220px;
+
+    &::before {
+      left: -39px;
+      width: 23px;
+      height: 29px;
+      background: url("../img/icon-address.png");
+    }
+  }
+
+  .page-footer__telefon::before {
+    left: -38px;
+    width: 20px;
+    height: 25px;
+    background: url("../img/icon-telefon-red.png");
+  }
+
+  .page-footer__pickup-address,
+  .page-footer__telefon {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .page-footer__pickup-work-shedule {
+    max-width: 160px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .page-footer__social-link {
+    margin-top: 0;
+  }
+
+  .page-footer__social-img {
+    margin-bottom: 10px;
+    height: 37px;
+    width: 117px;
+  }
+
+  .page-footer__payment {
+    margin: 0 0 20px;
+    max-width: 200px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .page-footer__payment img {
+    margin-top: 10px;
+    width: 97px;
+    height: 26px;
+  }
+
+  .page-footer__copyright {
+    padding: 22px 0;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

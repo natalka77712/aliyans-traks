@@ -1,3 +1,14 @@
-h1 {
-  color: red;
-}
+// Globals
+@import "variables.scss";
+@import "scaffolding.scss";
+@import "mixins.scss";
+
+//Blocks
+
+@import "blocks/categories.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/main-block.scss";
+@import "blocks/new-arrival.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/subscription.scss";
